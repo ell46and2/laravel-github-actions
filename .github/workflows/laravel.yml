@@ -19,8 +19,8 @@ jobs:
     - name: Cache Dependencies
       uses: actions/cache@v3
       with:
-        path: /vendor
-        key: deps-vendor-${{ hashFiles('**/composer.lock') }}
+        path: vendor
+        key: deps-vendor-${{ hashFiles('composer.lock') }}
     - name: Install Dependencies
       run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
     - name: Generate key
