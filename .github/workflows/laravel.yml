@@ -36,4 +36,7 @@ jobs:
         DB_CONNECTION: sqlite
         DB_DATABASE: database/database.sqlite
       run: php artisan test
+    - name: Run Pint Test
+      run: composer run pint-test
+
 
